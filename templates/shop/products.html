@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+
+<div class="products-container">
+    <div class="product-card">
+        <img src="https://ds1.skrami.com/products/p1113602_5fb02bda0fd18.jpg" alt="Деревянная ваза">
+        <h2 class="product-title">Деревянная ваза</h2>
+        <p class="product-description">Красивая деревянная ваза</p>
+        <p class="product-price">1500 рублей</p>
+        <form action="{% url 'checkout_session' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="name" value="Деревянная ваза" class="hidden-input">
+            <input type="hidden" name="price" value="1500" class="hidden-input">
+            <input type="hidden" name="description" value="Красивая деревянная ваза" class="hidden-input">
+            <button type="submit" class="btn"><i class="fa fa-shopping-cart"></i>Купить</button>
+        </form>
+    </div>
+    <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1579202673506-ca3ce28943ef" alt="Ceramic Vase">
+        <h2 class="product-title">Породистый котонёк</h2>
+        <p class="product-description">Породистый котёнок курильский бобтейл</p>
+        <p class="product-price">15000 рублей</p>
+        <form action="{% url 'checkout_session' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="name" value="Породистый котонёк" class="hidden-input">
+            <input type="hidden" name="price" value="15000" class="hidden-input">
+            <input type="hidden" name="description" value="Elegant ceramic vase perfect for floral arrangements or as a standalone piece." class="hidden-input">
+            <button type="submit" class="btn"><i class="fa fa-shopping-cart"></i>Купить</button>
+        </form>
+    </div>
+    <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL3XX4dJIywmbzAGBU8hO2OTcFAqgRYSWjJQ&s" alt="Ceramic Vase">
+        <h2 class="product-title">Пин бургер</h2>
+        <p class="product-description">Железный пин в виде бургера. 10 см</p>
+        <p class="product-price">200 рублей</p>
+        <form action="{% url 'checkout_session' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="name" value="Пин бургер" class="hidden-input">
+            <input type="hidden" name="price" value="200" class="hidden-input">
+            <input type="hidden" name="description" value="Железный пин в виде бургера. 10 см" class="hidden-input">
+            <button type="submit" class="btn"><i class="fa fa-shopping-cart"></i>Купить</button>
+        </form>
+    </div>
+</div>
+
+</body>
+{% endblock %}

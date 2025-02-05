@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Profile - YourApp {% endblock %}
+{% load socialaccount %}
+{% block content %}
+    <div class="container-login">
+        <div class="row align-items-center justify-content-center" style="height: 87vh;">
+            <div class="col-lg-3"></div>
+
+            <div class="col-lg-6"> 
+                <div class="bg-white p-4 rounded-3 shadow text-center">
+                    <h2 class="text-dark">Добро пожаловать</h2>
+
+                    
+                    <a href="{% provider_login_url 'google' %}">
+                        <button class="btn btn-google">
+                            <img src="https://playtht-website-assets.s3.amazonaws.com/img/brand/google.svg" alt="Google logo"/>Зарегистрироваться через Google
+                        </button>
+                    </a>
+                    <a href="{% provider_login_url 'github' %}">
+                        <button class="btn btn-google github">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub logo"/>Зарегистрироваться через GitHub
+                        </button>
+                    </a>
+
+                    <div class="text-dark text-muted">или зарегистрируйтесь вручную</div>
+                    <form class="form" action="{% url 'login' %}" method="post">
+                        {% csrf_token %}
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Почта" required>
+                        <input type="password" class="form-control" name="password" id="Password1" placeholder="Пароль" required>
+
+                        <p class="text-dark mt-2">
+                            Нет аккаунта? <a href='{% url "signup" %}'>Зарегистрируйтесь</a>
+                        </p>
+
+                    
+                        <button type="submit" class="btn btn-submit">Подтвердить</button>
+                    </form>
+                    <div class="divider"></div>
+                    <p class="text-dark text-muted">
+                        Забыли пароль? <a href="#">Сбросить</a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+{% endblock %}

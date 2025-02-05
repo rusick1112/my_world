@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h1 class="display-4">Добро пожаловать в интернет агрегатор МОЙМИР!</h1>
+    <hr class="my-4">
+   <a href="{% url 'products' %}">Посмотреть товары</a>
+</div>
+{% endblock %}
