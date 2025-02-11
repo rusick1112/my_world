@@ -79,4 +79,4 @@ python manage.py runserver
 ## Фото проекта
 
 ![главная страница](https://github.com/rusick1112/my_world/blob/main/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202025-02-11%20144351.png?raw=true)
-![OAuth2.0]
+![OAuth2.0](https://github.com/rusick1112/my_world/blob/main/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202025-02-11%20145419.png?raw=true)
