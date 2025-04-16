@@ -1,4 +1,4 @@
-# Стек
+# AuthCatalog
 [![Python version](https://img.shields.io/static/v1?label=Python&logo=python&message=3.12.7&color=blue)](https://www.python.org/)
 [![Python web framework](https://img.shields.io/static/v1?label=Django&logo=django&message=5.0.6&color=blue)](https://www.djangoproject.com/)
 [![Bootstrap](https://img.shields.io/static/v1?label=Bootstrap&logo=bootstrap&message=5.3.2&color=purple)](https://getbootstrap.com/)
